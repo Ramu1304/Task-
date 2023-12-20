@@ -1,0 +1,75 @@
+
+
+1. what are the four access Modifiers available in java and what is their 
+   significance in terms of class, method, and variable accessibility?
+
+Public (public):
+
+Class: If a class is declared as public, it can be accessed from any other class.
+Method: A public method can be accessed from any other class.
+Variable: A public variable (field) can be accessed from any other class.
+
+
+Private (private):
+
+Class: A private class is not allowed in the top-level class (i.e., it cannot be the outermost class in a file). It is typically used as an inner class.
+Method: A private method can only be accessed within the same class.
+Variable: A private variable (field) can only be accessed within the same class.
+
+
+Protected (protected):
+
+Class: Similar to public, a protected class cannot be the outermost class in a file. It is often used for inheritance in the same package.
+Method: A protected method can be accessed within the same package and by subclasses (even if they are in different packages).
+Variable: A protected variable (field) can be accessed within the same package and by subclasses (even if they are in different packages).
+
+
+Default (Package-Private or No Modifier):
+
+Class: If no access modifier is specified (default), it is accessible only within the same package.
+Method: A method with default access can be accessed within the same package.
+Variable: A variable with default access can be accessed within the same package.
+
+2. what is the difference between exception and error?
+
+Exception:
+
+An exception is an abnormal event or a runtime error that occurs during the execution of a Java program.
+Exceptions are typically caused by issues that a program might encounter, such as invalid input, file not found, network problems, etc.
+Exceptions are recoverable, and they can be handled by the program using try-catch blocks or by declaring the method that might throw an exception using the throws keyword.
+Examples of exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and FileNotFoundException.
+
+Error:
+
+An error, on the other hand, is a more severe issue that usually occurs in the Java runtime environment rather than within the program itself.
+Errors are often caused by external factors or issues that are beyond the control of the program, such as running out of memory (OutOfMemoryError), a stack overflow (StackOverflowError), or hardware failures.
+Unlike exceptions, errors are generally not recoverable, and attempting to catch or handle them might not be meaningful.
+Errors are usually used to indicate serious problems that may lead to the termination of the program.
+
+
+3.what is the difference between checked Exception and unchecked Exception?
+
+Checked Exceptions:
+
+Checked exceptions are exceptions that are checked at compile-time by the Java compiler.
+They extend the Exception class but not the RuntimeException class.
+Checked exceptions must be either caught by using a try-catch block or declared using the throws clause in the method signature.
+Examples of checked exceptions include IOException, FileNotFoundException, and ClassNotFoundException.
+
+Checked exceptions are checked at compile-time.
+They extend the Exception class.
+Handling or declaration (using throws) is mandatory.
+Examples include IOException and ClassNotFoundException.
+
+Unchecked Exceptions (Runtime Exceptions):
+
+Unchecked exceptions are exceptions that are not checked at compile-time.
+They extend the RuntimeException class or one of its subclasses.
+Unchecked exceptions do not require a try-catch block or a throws clause, and the compiler does not enforce handling or declaration of unchecked exceptions.
+Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and ArithmeticException.
+Example of an unchecked exception:
+
+Unchecked exceptions are not checked at compile-time.
+They extend the RuntimeException class or one of its subclasses.
+Handling or declaration is optional.
+Examples include NullPointerException and ArithmeticException.
